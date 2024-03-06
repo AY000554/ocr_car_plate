@@ -102,7 +102,7 @@ def test(config):
 
 if __name__ == '__main__':
     config = configparser.ConfigParser()
-    config.read("Config.ini")
+    config.read("Config/Config.ini")
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
     os.environ["CUDA_VISIBLE_DEVICES"] = config["Test"]["device"]
     tf.config.set_soft_device_placement(True)
